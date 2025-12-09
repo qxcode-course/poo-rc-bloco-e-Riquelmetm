@@ -33,3 +33,17 @@ def processar_pagamento(pagamento: Pagamento):
 
 pix = Pix(2.50, "café coado", "123", "pikipeiii")
 processar_pagamento(pix)
+
+
+class CartaodeCredito(Pagamento):
+    def __init__(self, valor: float, descricao: str, numero:int, nome:str, limite:float):
+        super().__init__(valor, descricao)
+        self.numero = numero
+        self.nome = nome
+        self.limite = limite
+
+    def processar(self):
+        if self.valor > self.limite:
+            print("Liso!!!")
+            return
+        self.limite -= self.valor
