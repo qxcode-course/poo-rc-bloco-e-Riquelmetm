@@ -1,0 +1,8 @@
+2025-12-09 13:34:09, MOVE, v:1, k:poo@zoo, mode:DOWN
+2025-12-09 13:35:42, MOVE, v:1, k:poo@pagamento, mode:DOWN
+2025-12-09 13:35:45, MOVE, v:1, k:poo@shapes, mode:DOWN
+2025-12-09 13:35:46, MOVE, v:1, k:poo@shapes, mode:PICK
+2025-12-09 13:35:48, MOVE, v:1, k:poo@shapes, mode:BACK
+2025-12-09 13:35:49, MOVE, v:1, k:poo@estacionamento, mode:DOWN
+2025-12-09 13:35:50, MOVE, v:1, k:poo@cofre, mode:DOWN
+2025-12-09 13:35:55, MOVE, v:1, k:poo@cadastro, mode:DOWN
