@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-10_14-10-36",
+            "content": "from abc import ABC, abstractmethod\nclass Veiculo:\n    def __init__(self, id:str, entrada:int, tipo: str):\n        self.id = id\n        self.entrada = entrada\n        self.tipo = tipo\n\n    @abstractmethod\n    def calcularValor(self):\n        pass\n\n    def __str__(self) -> str:\n        return f\"\"\n    \nclass Bike(Veiculo):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        super().__init__(id, entrada, tipo)\n\nclass Moto(Veiculo):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        super().__init__(id, entrada, tipo)\n\nclass Carro(Veiculo):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        super().__init__(id, entrada, tipo)",
+            "lines": "25"
+        }
+    ]
+}
