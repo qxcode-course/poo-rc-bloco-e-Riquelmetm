@@ -50,4 +50,19 @@ class Estacionamento:
     def __init__(self):
         self.veiculo: list[Veiculo] = []
         self.horaatual:int = 0
-        
+    
+    def __str__(self) -> str:
+        if not self.veiculo:
+            return f"{self.horaatual}"
+
+        return f"{self.veiculo}"
+    
+
+estacionamento = Estacionamento()
+
+while True:
+    a = input()
+    args = a.split(" ")
+
+    if args[0] == "show":
+
