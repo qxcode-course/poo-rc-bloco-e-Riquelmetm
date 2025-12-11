@@ -16,6 +16,10 @@ class Bike(Veiculo):
     def __init__(self, id: str, entrada: int, tipo: str):
         super().__init__(id, entrada, tipo)
 
+    def calcularValor(self, saida: int) -> float:
+        calculo = 3
+        return calculo
+
 class Moto(Veiculo):
     def __init__(self, id: str, entrada: int, tipo: str):
         super().__init__(id, entrada, tipo)
@@ -35,4 +39,15 @@ class Carro(Veiculo):
         super().__init__(id, entrada, tipo)
 
     def calcularValor(self, saida: int):
-        return super().calcularValor(saida)
+        calculo = saida - super().entrada
+        calculo = calculo/10
+        int(calculo)
+        if calculo <= 5:
+            calculo = 5
+        return calculo
+
+class Estacionamento:
+    def __init__(self):
+        self.veiculo: list[Veiculo] = []
+        self.horaatual:int = 0
+        
