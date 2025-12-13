@@ -10,11 +10,12 @@ class Veiculo:
         pass
 
     def __str__(self) -> str:
-        return f"{self.id}"
+        return f"{self.id},"
     
 class Bike(Veiculo):
     def __init__(self, id: str, entrada: int, tipo: str):
         super().__init__(id, entrada, tipo)
+        super().tipo = "Bike"
 
     def calcularValor(self, saida: int) -> float:
         calculo = 3
@@ -23,6 +24,7 @@ class Bike(Veiculo):
 class Moto(Veiculo):
     def __init__(self, id: str, entrada: int, tipo: str):
         super().__init__(id, entrada, tipo)
+        super().tipo = "Moto"
         
     def calcularValor(self, saida:int) -> float:
 
@@ -37,6 +39,7 @@ class Moto(Veiculo):
 class Carro(Veiculo):
     def __init__(self, id: str, entrada: int, tipo: str):
         super().__init__(id, entrada, tipo)
+        super().tipo = "Carro"
 
     def calcularValor(self, saida: int):
         calculo = saida - super().entrada
@@ -50,6 +53,17 @@ class Estacionamento:
     def __init__(self):
         self.veiculo: list[Veiculo] = []
         self.horaatual:int = 0
+    
+    def estacionar(self, veiculo: Veiculo):
+        self.veiculo.append(veiculo)
+    
+    def pagar(self, id:str):
+        for i in self.veiculo:
+            if i == id:
+                
+
+
+
     
     def __str__(self) -> str:
         if not self.veiculo:
