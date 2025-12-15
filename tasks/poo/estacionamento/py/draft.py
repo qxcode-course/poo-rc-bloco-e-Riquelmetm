@@ -17,8 +17,7 @@ class Bike(Veiculo):
         super().__init__(id, entrada, "Bike")
 
     def calcularValor(self, saida: int) -> float:
-        calculo = 3
-        return calculo
+        return 3
 
 class Moto(Veiculo):
     def __init__(self, id: str, entrada: int):
@@ -26,7 +25,7 @@ class Moto(Veiculo):
         
     def calcularValor(self, saida:int) -> float:
 
-        calculo = saida - super().entrada
+        calculo = saida - self.entrada
         calculo = calculo/20
         return calculo
 
@@ -37,8 +36,8 @@ class Carro(Veiculo):
     def __init__(self, id: str, entrada: int):
         super().__init__(id, entrada, "Carro")
 
-    def calcularValor(self, saida: int):
-        calculo = saida - super().  entrada
+    def calcularValor(self, saida: int) -> float:
+        calculo = saida - self.entrada
         calculo = calculo/10
         if calculo <= 5:
             calculo = 5
@@ -60,7 +59,7 @@ class Estacionamento:
 
         if encontrado:
             valor = encontrado.calcularValor(self.horaatual)
-            print(f"{encontrado.tipo} chegou {encontrado.entrada} saiu {self.horaatual}. Pagar R$ {valor}")
+            print(f"{encontrado.tipo} chegou {encontrado.entrada} saiu {self.horaatual}. Pagar R$ {valor:.2f}")
             self.veiculo.remove(encontrado)
 
 
@@ -73,7 +72,7 @@ class Estacionamento:
         if not self.veiculo:
             return f"Hora atual: {self.horaatual}"
 
-        return f"{lista} \nHora atual: {self.horaatual}"
+        return f"{lista}\nHora atual: {self.horaatual}"
     
 
 estacionamento = Estacionamento()
