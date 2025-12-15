@@ -21,3 +21,27 @@
 2025-12-15 01:55:56, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
 2025-12-15 01:55:56, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
 2025-12-15 02:00:36, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:111
+2025-12-15 02:04:19, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 02:04:19, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:07:14, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:09:30, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 02:10:23, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 02:10:24, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:10:26, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-15 02:11:40, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:11:42, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-15 02:11:46, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-15 02:13:55, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:107
+2025-12-15 02:14:02, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:107
+2025-12-15 02:15:24, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:107
+2025-12-15 02:19:24, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:108
+2025-12-15 02:20:19, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:108
+2025-12-15 02:20:57, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:108
+2025-12-15 02:21:08, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:108
+2025-12-15 02:21:35, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:21:56, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:22:05, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:22:13, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:22:36, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:22:46, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0, size:109
+2025-12-15 02:22:53, MOVE, v:1, k:poo@estacionamento, mode:BACK

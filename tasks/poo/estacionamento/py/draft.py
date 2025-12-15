@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-class Veiculo:
-    def __init__(self, id:str, entrada:int):
+class Veiculo(ABC):
+    def __init__(self, id:str, entrada:int, tipo:str):
         self.id = id
         self.entrada = entrada
         self.tipo = tipo
@@ -10,12 +10,11 @@ class Veiculo:
         pass
 
     def __str__(self) -> str:
-        return f"{self.id},"
+        return f"{self.tipo:_>10} : {self.id:_>10} : {self.entrada}"
     
 class Bike(Veiculo):
     def __init__(self, id: str, entrada: int):
-        super().__init__(id, entrada)
-        super().tipo = "Bike"
+        super().__init__(id, entrada, "Bike")
 
     def calcularValor(self, saida: int) -> float:
         calculo = 3
@@ -23,14 +22,12 @@ class Bike(Veiculo):
 
 class Moto(Veiculo):
     def __init__(self, id: str, entrada: int):
-        super().__init__(id, entrada)
-        super().tipo = "Moto"
+        super().__init__(id, entrada, "Moto")
         
     def calcularValor(self, saida:int) -> float:
 
         calculo = saida - super().entrada
         calculo = calculo/20
-        int(calculo)
         return calculo
 
 
@@ -38,13 +35,11 @@ class Moto(Veiculo):
 
 class Carro(Veiculo):
     def __init__(self, id: str, entrada: int):
-        super().__init__(id, entrada)
-        super().tipo = "Carro"
+        super().__init__(id, entrada, "Carro")
 
     def calcularValor(self, saida: int):
-        calculo = saida - super().entrada
+        calculo = saida - super().  entrada
         calculo = calculo/10
-        int(calculo)
         if calculo <= 5:
             calculo = 5
         return calculo
@@ -74,16 +69,18 @@ class Estacionamento:
 
     
     def __str__(self) -> str:
+        lista = "\n".join([str(i) for i in self.veiculo])
         if not self.veiculo:
-            return ""
+            return f"Hora atual: {self.horaatual}"
 
-        return "\n".join([str(i) for i in self.veiculo])
+        return f"{lista} \nHora atual: {self.horaatual}"
     
 
 estacionamento = Estacionamento()
 
 while True:
     a = input()
+    print("$" + a)
     args = a.split(" ")
 
     if args[0] == "end":
