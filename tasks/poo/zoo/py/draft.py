@@ -15,7 +15,6 @@ class Animal:
     def mover(self):
         pass
 
-
 class Gato(Animal):
     def __init__(self, nome: str):
         super().__init__(nome)
@@ -25,5 +24,29 @@ class Gato(Animal):
         return
     
     def mover(self):
-        print("Andar ")
+        print("Andar e dormir")
+        return
+class Cachorro(Animal):
+    def __init__(self, nome: str):
+        super().__init__(nome)
+    
+    def fazer_som(self):
+        print("Auau")
+        return
+    
+    def mover(self):
+        print("Correr e comer")
+        return
+
+
+class Passarinho(Animal):
+    def __init__(self, nome: str):
+        super().__init__(nome)
+    
+    def fazer_som(self):
+        print("Piupiu")
+        return
+    
+    def mover(self):
+        print("Voar")
         return
