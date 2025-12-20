@@ -10,7 +10,8 @@ class Pagamento(ABC):
             raise ValueError("Valor negativo")
     
     def resumo(self):
-        return f"Pagamento de R$ {self.valor}: {self.descricao}"
+        print(f"Pagamento de R$ {self.valor:.2f}: {self.descricao}")
+        return
     
     @abstractmethod
     def processar(self):
@@ -31,8 +32,6 @@ def processar_pagamento(pagamento: Pagamento):
     pagamento.resumo()
     pagamento.processar()
 
-pix = Pix(2.50, "café coado", "123", "pikipeiii")
-processar_pagamento(pix)
 
 
 class CartaodeCredito(Pagamento):
@@ -47,4 +46,23 @@ class CartaodeCredito(Pagamento):
             print("Liso!!!")
             return
         self.limite -= self.valor
+        print(f"Pagamento aprovado no cartão Cliente {self.nome}. Limite restante: {self.limite}")
 
+
+class Boleto(Pagamento):
+    def __init__(self, valor: float, descricao: str, codigo:str, vencimento:str):
+        super().__init__(valor, descricao)
+        self.codigo_barras = codigo
+        self.vencimento = vencimento
+
+    def processar(self):
+        print("Boleto gerado. Aguardando pagamento...")
+
+pagamentos = [
+    Pix(150, "Camisa esportiva", "email@ex.com", "Banco XPTO"),
+    CartaodeCredito(400, "Tênis esportivo", 1234567891234567, "Raimundo", 500),
+    Boleto(89.90, "Livro de Python", "123456789000", "2025-01-10"),
+    CartaodeCredito(800, "Notebook", 9999888877776666, "Cliente Y", 700)]
+
+for i in pagamentos:
+    i.processar()
