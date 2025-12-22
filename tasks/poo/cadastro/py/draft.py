@@ -6,4 +6,13 @@ class Account(ABC):
         self.saldo = saldo_atual
         self.tipoid = tipoid
 
+    def despositar(self, saldo:float):
+        self.saldo+= saldo
+        return
+
+    def saque(self, saque:float):
+        if saque > self.saldo:
+            print("fail: conta nao encontrada")
+            return
+        self.saldo -= saque
     
